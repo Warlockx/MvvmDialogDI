@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvvmDialogDI.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -8,19 +9,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MvvmDialogDI
+namespace MvvmDialogDI.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for InputWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class InputWindow : Window
     {
-        public MainWindow()
+        public InputWindow(MainWindowViewModel ViewModel)
         {
             InitializeComponent();
+            DataContext = ViewModel;
         }
     }
 }
